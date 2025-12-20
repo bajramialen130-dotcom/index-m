@@ -15,13 +15,13 @@
       font-family: 'Inter', sans-serif;
     }
 
+    /* GLOBAL YELLOW BACKGROUND */
     body {
-      background: radial-gradient(circle at top, #ffe94d, #f7c600);
+      background: #FFD400;
       color: #111;
       overflow-x: hidden;
     }
 
-    /* SMOOTH SCROLL FEEL */
     html {
       scroll-behavior: smooth;
     }
@@ -33,59 +33,24 @@
       align-items: center;
       justify-content: center;
       padding: 120px 40px;
-    }
-
-    .hero-inner {
-      max-width: 900px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 64px;
+      font-size: 72px;
       font-weight: 600;
       letter-spacing: -2px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 22px;
       opacity: 0.85;
-      margin-bottom: 50px;
-    }
-
-    /* GLASS PANEL */
-    .glass {
-      backdrop-filter: blur(18px);
-      background: rgba(255,255,255,0.18);
-      border-radius: 28px;
-      border: 1px solid rgba(255,255,255,0.4);
-      box-shadow:
-        0 0 40px rgba(255,255,255,0.25),
-        0 0 80px rgba(255,214,0,0.35);
-    }
-
-    /* CTA */
-    .cta {
-      display: inline-block;
-      padding: 18px 44px;
-      font-size: 18px;
-      font-weight: 500;
-      border-radius: 50px;
-      background: #111;
-      color: #ffd400;
-      text-decoration: none;
-      box-shadow: 0 0 25px rgba(0,0,0,0.4);
-      transition: all 0.6s ease;
-    }
-
-    .cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 40px rgba(0,0,0,0.6);
     }
 
     /* SECTION */
     section {
-      padding: 140px 60px;
+      padding: 120px 60px;
       max-width: 1400px;
       margin: auto;
     }
@@ -97,6 +62,18 @@
       text-align: center;
     }
 
+    /* TRUE GLASS EFFECT */
+    .glass {
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow:
+        0 0 30px rgba(255, 214, 0, 0.7),
+        0 0 80px rgba(255, 214, 0, 0.6);
+    }
+
     /* OFFER GRID */
     .offer {
       display: grid;
@@ -105,46 +82,45 @@
     }
 
     .offer-item {
-      padding: 50px 40px;
-      border-radius: 30px;
+      padding: 60px 40px;
       text-align: center;
       transition: transform 0.8s ease;
     }
 
     .offer-item:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
     .offer-item h3 {
-      font-size: 26px;
-      margin-bottom: 15px;
+      font-size: 28px;
+      margin-bottom: 12px;
     }
 
     .offer-item span {
-      font-size: 15px;
-      opacity: 0.7;
+      font-size: 16px;
+      opacity: 0.75;
     }
 
-    /* SLOW MOTION FEATURE */
+    /* SLOW MOTION SECTION */
     .slow {
-      margin-top: 120px;
+      padding: 140px 60px;
       text-align: center;
     }
 
     .slow h2 {
-      font-size: 52px;
+      font-size: 56px;
       margin-bottom: 30px;
     }
 
     .slow p {
       font-size: 22px;
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     /* CONTACT */
     .contact {
-      background: #111;
-      color: #ffd400;
+      background: rgba(0,0,0,0.85);
+      color: #FFD400;
       padding: 120px 60px;
       text-align: center;
     }
@@ -162,9 +138,9 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 42px; }
+      .hero h1 { font-size: 46px; }
       section h2 { font-size: 36px; }
-      .slow h2 { font-size: 38px; }
+      .slow h2 { font-size: 40px; }
     }
   </style>
 </head>
@@ -173,10 +149,9 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-inner">
+  <div>
     <h1>Index</h1>
     <p>Dostava hrane u Bačkoj Palanci</p>
-    <a class="cta" href="#">Naruči putem Bolt aplikacije</a>
   </div>
 </div>
 
@@ -187,7 +162,7 @@
   <div class="offer">
     <div class="offer-item glass">
       <h3>Index sendviči</h3>
-      <span>Brend ukus</span>
+      <span>Prepoznatljiv ukus</span>
     </div>
 
     <div class="offer-item glass">
@@ -202,7 +177,7 @@
 
     <div class="offer-item glass">
       <h3>Piletina</h3>
-      <span>Fileti i hrskavi zalogaji</span>
+      <span>Hrskavi zalogaji</span>
     </div>
 
     <div class="offer-item glass">
@@ -212,23 +187,13 @@
   </div>
 </section>
 
-<!-- SLOW MOTION FEATURE -->
-<section class="slow">
+<!-- SLOW -->
+<div class="slow">
   <h2>Slow motion sendviča</h2>
-  <p>Detalji, tekstura, miris.  
-     Hrana koja se gleda pre nego što se jede.</p>
-</section>
+  <p>Hrana koja se prvo gleda, pa jede.</p>
+</div>
 
 <!-- CONTACT -->
 <div class="contact">
   <p>📍 Bačka Palanka</p>
-  <p>📞 064 1392100</p>
-  <p>🚚 Dostava putem Bolt aplikacije</p>
-</div>
-
-<footer>
-  © Index • Bačka Palanka
-</footer>
-
-</body>
-</html>
+  <
