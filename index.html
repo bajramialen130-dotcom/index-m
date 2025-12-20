@@ -1,158 +1,183 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bora Bistro – Dostava Bačka Palanka</title>
+  <meta charset="UTF-8">
+  <title>Index M – Dostava | Bačka Palanka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0a0a0a;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #000;
       color: #fff;
     }
+
+    /* HERO */
     .hero {
-      background: url('images/hero.jpg') center/cover no-repeat;
-      height: 80vh;
+      height: 100vh;
+      background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+      ),
+      url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
-      position: relative;
+      padding: 20px;
     }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-    }
+
     .hero h1 {
-      font-size: 48px;
-      z-index: 1;
-    }
-    .hero p {
-      font-size: 20px;
-      z-index: 1;
-      margin-top: 8px;
-    }
-    .btn-order {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 14px 28px;
-      background: #f2c400;
-      color: #000;
-      font-size: 18px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      z-index: 1;
-    }
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 34px;
-      color: #f2c400;
+      font-size: 64px;
+      color: #FFD400;
       margin-bottom: 20px;
     }
-    .menu-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
     }
-    .menu-card {
+
+    /* SECTION */
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 40px;
+      color: #FFD400;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
       background: #111;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      width: 280px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
-    .menu-card img {
+
+    .card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
-    .menu-card h3 {
-      margin: 12px 0 6px;
-      font-size: 22px;
-      color: #f2c400;
+
+    .card div {
+      padding: 20px;
     }
-    .menu-card p {
-      margin: 0 0 12px;
-      color: #ccc;
+
+    .card h3 {
+      color: #FFD400;
+      margin-bottom: 10px;
     }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-      gap: 16px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    .footer {
-      background: #000;
-      padding: 24px 0;
+
+    /* ORDER */
+    .order {
+      background: #FFD400;
+      color: #000;
+      border-radius: 20px;
       text-align: center;
+      padding: 60px 20px;
+    }
+
+    .order h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .order p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .phone {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
       font-size: 14px;
-      color: #bbb;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <div>
-      <h1>Bora Bistro</h1>
-      <p>Dostava hrane u Bačkoj Palanci</p>
-      <a class="btn-order" href="https://bolt.eu/app" target="_blank">Naruči na Bolt</a>
+      <h1>Index M</h1>
+      <p>
+        Moderna dostava hrane u Bačkoj Palanci.  
+        Kvalitet, brzina i vrhunski ukus – svaki dan.
+      </p>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Naša Ponuda</h2>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/burger.jpg" alt="Burger">
-        <h3>Sočni Burger</h3>
-        <p>Najbolji burgeri u gradu</p>
+  <!-- PONUDA -->
+  <section>
+    <h2>Izdvajamo iz ponude</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+        <div>
+          <h3>Burgeri</h3>
+          <p>Sočni burgeri, premium sastojci.</p>
+        </div>
       </div>
-      <div class="menu-card">
-        <img src="images/pizza.jpg" alt="Pizza">
-        <h3>Hrskava Pizza</h3>
-        <p>Fino pečena, sa omiljenim dodacima</p>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e">
+        <div>
+          <h3>Pice</h3>
+          <p>Hrskavo testo i bogat nadev.</p>
+        </div>
       </div>
-      <div class="menu-card">
-        <img src="images/grill.jpg" alt="Grill">
-        <h3>Roštilj Specijal</h3>
-        <p>Klasik sa ukusom domaćeg roštilja</p>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604908177522-4025cddf3d48">
+        <div>
+          <h3>Roštilj</h3>
+          <p>Klasični ukusi sa žara.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>Galerija</h2>
-    <div class="gallery-grid">
-      <img src="images/g1.jpg" alt="">
-      <img src="images/g2.jpg" alt="">
-      <img src="images/g3.jpg" alt="">
-      <img src="images/g4.jpg" alt="">
-    </div>
-  </div>
+  <!-- ORDER -->
+  <section class="order">
+    <h2>Naruči odmah</h2>
+    <p>📍 Bačka Palanka</p>
+    <p>🚚 Brza dostava</p>
+    <div class="phone">📞 064 1392100</div>
+  </section>
 
-  <div class="section">
-    <h2>Kontakt</h2>
-    <p>📍 Bačka Palanka, Srbija</p>
-    <p>📞 064 1392100</p>
-    <p>🚚 Dostava putem Bolt aplikacije</p>
-  </div>
-
-  <div class="footer">
-    © Bora Bistro • Dostava Bačka Palanka
-  </div>
+  <footer>
+    © Index M • Bačka Palanka
+  </footer>
 
 </body>
 </html>
