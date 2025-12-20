@@ -2,7 +2,7 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Index M – Dostava | Bačka Palanka</title>
+  <title>Bora Bistro – Dostava hrane</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -10,174 +10,183 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
     body {
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #111;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      padding: 40px 80px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 600;
     }
 
     /* HERO */
     .hero {
-      height: 100vh;
-      background: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)
-      ),
-      url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
+      padding: 120px 80px;
+      max-width: 1200px;
     }
 
-    .hero h1 {
+    .hero h2 {
       font-size: 64px;
-      color: #FFD400;
-      margin-bottom: 20px;
+      font-weight: 600;
+      margin-bottom: 30px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 22px;
       max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      background: #FFD400;
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
     }
 
     /* SECTION */
     section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
+      padding: 100px 80px;
+      border-top: 1px solid #eee;
     }
 
-    section h2 {
-      font-size: 40px;
-      color: #FFD400;
+    section h3 {
+      font-size: 36px;
       margin-bottom: 40px;
-      text-align: center;
     }
 
-    /* CARDS */
-    .cards {
+    .columns {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 60px;
     }
 
-    .card {
-      background: #111;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .card div {
-      padding: 20px;
-    }
-
-    .card h3 {
-      color: #FFD400;
+    .columns h4 {
+      font-size: 22px;
       margin-bottom: 10px;
     }
 
-    /* ORDER */
-    .order {
-      background: #FFD400;
-      color: #000;
-      border-radius: 20px;
-      text-align: center;
-      padding: 60px 20px;
+    .columns p {
+      color: #555;
+      font-size: 18px;
     }
 
-    .order h2 {
-      color: #000;
-      margin-bottom: 20px;
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .order p {
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #111;
+      color: #fff;
+      padding: 100px 80px;
+    }
+
+    .contact h3 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .contact p {
       font-size: 20px;
       margin-bottom: 10px;
     }
 
-    .phone {
-      font-size: 26px;
-      font-weight: bold;
-      margin-top: 20px;
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-      font-size: 14px;
+    @media (max-width: 768px) {
+      header, .hero, section, .contact {
+        padding: 60px 20px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
+<header>
+  <h1>Bora Bistro</h1>
+</header>
+
+<div class="hero">
+  <h2>Dostava hrane u Bačkoj Palanci</h2>
+  <p>
+    Kvalitetna hrana, brza priprema i pouzdana dostava.
+    Naručivanje je dostupno putem Bolt aplikacije.
+  </p>
+  <a class="btn" href="#">Naruči na Bolt</a>
+</div>
+
+<section>
+  <h3>Naša ponuda</h3>
+  <div class="columns">
     <div>
-      <h1>Index M</h1>
-      <p>
-        Moderna dostava hrane u Bačkoj Palanci.  
-        Kvalitet, brzina i vrhunski ukus – svaki dan.
-      </p>
+      <h4>Burger</h4>
+      <p>Sočni burgeri, pripremljeni od pažljivo biranih sastojaka.</p>
+    </div>
+    <div>
+      <h4>Pizza</h4>
+      <p>Hrskavo testo i klasični ukusi koji uvek prolaze.</p>
+    </div>
+    <div>
+      <h4>Grill</h4>
+      <p>Roštilj specijaliteti sa domaćim šmekom.</p>
     </div>
   </div>
+</section>
 
-  <!-- PONUDA -->
-  <section>
-    <h2>Izdvajamo iz ponude</h2>
+<section>
+  <h3>Galerija</h3>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e">
+    <img src="https://images.unsplash.com/photo-1604908177522-4025cddf3d48">
+  </div>
+</section>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
-        <div>
-          <h3>Burgeri</h3>
-          <p>Sočni burgeri, premium sastojci.</p>
-        </div>
-      </div>
+<div class="contact">
+  <h3>Kontakt</h3>
+  <p>📍 Bačka Palanka, Srbija</p>
+  <p>📞 064 1392100</p>
+  <p>🚚 Dostava putem Bolt aplikacije</p>
+</div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e">
-        <div>
-          <h3>Pice</h3>
-          <p>Hrskavo testo i bogat nadev.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1604908177522-4025cddf3d48">
-        <div>
-          <h3>Roštilj</h3>
-          <p>Klasični ukusi sa žara.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ORDER -->
-  <section class="order">
-    <h2>Naruči odmah</h2>
-    <p>📍 Bačka Palanka</p>
-    <p>🚚 Brza dostava</p>
-    <div class="phone">📞 064 1392100</div>
-  </section>
-
-  <footer>
-    © Index M • Bačka Palanka
-  </footer>
+<footer>
+  © Bora Bistro • Dostava Bačka Palanka
+</footer>
 
 </body>
 </html>
